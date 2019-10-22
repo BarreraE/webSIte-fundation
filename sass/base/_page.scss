@@ -2,104 +2,81 @@
 body {
     overflow-x: hidden;
     @include body-font;
-  }
-  
-  p {
+}
+
+p {
     line-height: 1.75;
-  }
-  
-  a {
+}
+
+a {
     color: $primary;
     &:hover {
-      color: darken($primary, 10%);
+        color: darken($primary, 10%);
     }
-  }
-  
-  .text-primary {
+}
+
+.text-primary {
     color: $primary !important;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
     @include heading-font;
-  }
-  
-  .page-section {
+}
+
+.page-section {
     padding: 100px 0;
     h2.section-heading {
-      font-size: 40px;
-      margin-top: 0;
-      margin-bottom: 15px;
+        font-size: 40px;
+        margin-top: 0;
+        margin-bottom: 15px;
     }
     h3.section-subheading {
-      font-size: 16px;
-      font-weight: 400;
-      font-style: italic;
-      margin-bottom: 75px;
-      text-transform: none;
-      @include serif-font;
+        font-size: 16px;
+        font-weight: 400;
+        font-style: italic;
+        margin-bottom: 75px;
+        text-transform: none;
+        @include serif-font;
     }
-  }
-  @media(min-width:768px) {
+}
+
+@media(min-width:768px) {
     section {
-      padding: 150px 0;
+        padding: 150px 0;
     }
-  }
-  
-  // Highlight color customization
-  ::-moz-selection {
+}
+
+// Highlight color customization
+ ::-moz-selection {
     background: $primary;
     text-shadow: none;
-  }
-  
-  ::selection {
+}
+
+ ::selection {
     background: $primary;
     text-shadow: none;
-  }
-  
-  img::selection {
+}
+
+img::selection {
     background: transparent;
-  }
-  
-  img::-moz-selection {
+}
+
+img::-moz-selection {
     background: transparent;
-  }
-  /*GALERY*/
-  .gallery {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
-    -webkit-column-width: 33%;
-    -moz-column-width: 33%;
-    column-width: 33%; }
-    .gallery .pics {
-    -webkit-transition: all 350ms ease;
-    transition: all 350ms ease; }
-    .gallery .animation {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); }
-    
-    @media (max-width: 450px) {
-    .gallery {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    column-count: 1;
-    -webkit-column-width: 100%;
-    -moz-column-width: 100%;
-    column-width: 100%;
-    }
-    }
-    
-    @media (max-width: 400px) {
-    .btn.filter {
-    padding-left: 1.1rem;
-    padding-right: 1.1rem;
-    }
-    }
-     
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
